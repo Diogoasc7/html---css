@@ -1,0 +1,7 @@
+div {
+    width: 300px;
+    height: 150px;
+    border: solid 5px red;
+    box-sizing: border-box;
+    text-align: center;
+}

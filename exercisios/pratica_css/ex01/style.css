@@ -1,0 +1,8 @@
+div {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(28, 62, 255);
+    border: solid 2px black;
+    text-align: center;
+    display: flexbox;
+}

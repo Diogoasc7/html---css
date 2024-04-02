@@ -1,0 +1,22 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    /* 3 colunas de largura igual */
+    grid-template-rows: repeat(2, 100px);
+    /* 2 linhas de altura fixa de 100px */
+    gap: 10px;
+    /* Espaçamento entre as células */
+}
+
+.item {
+    background-color: #00946f;
+    /* Cor de fundo padrão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.itemCima {
+    background-color: aqua;
+}
