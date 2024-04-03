@@ -1,2 +1,2 @@
 # html--css
- Atividades cruso html e css CursoEmVideo
+ Atividades cruso HTML e CSS CursoEmVideo
