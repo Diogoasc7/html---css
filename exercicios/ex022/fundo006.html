@@ -12,12 +12,20 @@
         background-color: black;
         background-image: url("imagens/wallpaper002.jpg");
         background-position: center center;
-        background-repeat: no-repeat;
+        background-repeat: no-repeat; /*REPEAT-Y equivale a repetição da imagem apenas verticalmente. E o REPEAT-X é sua repetição só que horizontal*/
         background-size: cover;
+        background-attachment: fixed; /*Também conhecido como "vínculo". A propriedade "fixed" tem o intuito de fixar a imagem de fundo na tela, para que ela no role com o conteúdo presente. Já o "Scrool" executa o contrario e faz com que a imagem role junto com o conteúdo*/
+
+        /*background:
+        A shorthand background permite definir várias propriedades relacionadas ao fundo, como background-color, background-image, background-repeat, background-position e background-size. A ordem geralmente seguida é: background-color, background-image, background-repeat, background-position e background-size.
+        Exemplo de uso:
+
+        background: black; url("imagens/wallpaper002.jpg"); no-repeat; center center;  
+        */
     }
     main {
         background-color: white;
-        width: 400px;
+        max-width: 550px;
         padding: 10px;
         margin: auto;
         border: 1px solid rgb(0, 0, 85);
@@ -28,6 +36,36 @@
 <body>
     <main>
         <h1>Teste de Imagem de Fundo</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quas, rerum repudiandae cumque autem cupiditate,
+            eaque ratione nisi iste provident et expedita eligendi laborum nostrum similique minus quibusdam itaque a.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime libero asperiores sint totam recusandae, animi
+            eveniet, vero laboriosam voluptates, facere provident sunt eligendi. Beatae esse ut tenetur, veniam tempora
+            delectus.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor iure blanditiis sapiente a consectetur
+            laudantium fugiat ratione magni. Ipsa ut adipisci facilis vel deserunt voluptatibus ipsum error explicabo
+            laboriosam praesentium.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quas, rerum repudiandae cumque autem cupiditate,
+            eaque ratione nisi iste provident et expedita eligendi laborum nostrum similique minus quibusdam itaque a.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime libero asperiores sint totam recusandae, animi
+            eveniet, vero laboriosam voluptates, facere provident sunt eligendi. Beatae esse ut tenetur, veniam tempora
+            delectus.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor iure blanditiis sapiente a consectetur
+            laudantium fugiat ratione magni. Ipsa ut adipisci facilis vel deserunt voluptatibus ipsum error explicabo
+            laboriosam praesentium.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quas, rerum repudiandae cumque autem cupiditate,
+            eaque ratione nisi iste provident et expedita eligendi laborum nostrum similique minus quibusdam itaque a.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime libero asperiores sint totam recusandae, animi
+            eveniet, vero laboriosam voluptates, facere provident sunt eligendi. Beatae esse ut tenetur, veniam tempora
+            delectus.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor iure blanditiis sapiente a consectetur
+            laudantium fugiat ratione magni. Ipsa ut adipisci facilis vel deserunt voluptatibus ipsum error explicabo
+            laboriosam praesentium.
+        </p>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quas, rerum repudiandae cumque autem cupiditate,
             eaque ratione nisi iste provident et expedita eligendi laborum nostrum similique minus quibusdam itaque a.
