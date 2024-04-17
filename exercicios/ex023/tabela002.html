@@ -18,7 +18,25 @@
             border-collapse: collapse;
             margin: auto;
             background-color: rgb(230, 230, 230);
+            position: relative;
         }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -2px;
+            background-color: rgb(49, 49, 49);
+        }
+
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        } /* UTILIZADO PARA CRIAR O EFEITO ZEBRADO, O NÚMERO NO PARENTESE QUER DIZER QUANTOS NÚMEROS QUEREMOS QUE PULE PARA COLOCAR A TARJA DA COR QUE OPTAMOS. TAMBÉM PODEMOS USAR (ODD) - PARA ÍMPAR E (EVEN) - PAR. */
 
         td, th{
             border: 1px solid black;
@@ -30,7 +48,7 @@
         }
 
         thead, tfoot{
-            background-color: grey;
+            background-color: rgb(49, 49, 49);
             color: white;
         }
     </style>
@@ -42,6 +60,7 @@
             ANATOMIA PARA TABELAS GRANDES
 
             TABLE
+                CAPTION - LEGENDA DA TABELA
                 THEAD
                     TR, TD, TH
                 TBODY
@@ -52,10 +71,11 @@
 PODEMOS TER APENAS O (TBODY) NA TABELA, OS OUTROS NÃO SÃO OBRIGATORIOS.
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -171,7 +191,7 @@ PODEMOS TER APENAS O (TBODY) NA TABELA, OS OUTROS NÃO SÃO OBRIGATORIOS.
 
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>218 905 461</strong></td>
             </tr>
         </tfoot>
