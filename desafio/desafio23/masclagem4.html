@@ -40,10 +40,10 @@
         <caption>Média em cada Materia</caption>
         <thead>
             <tr>
-                <th rowspan="2">Área</th>
-                <th rowspan="3">Disciplinas</th>
-                <th colspan="2">Notas</th>
-                <th rowspan="2">Médias</th>
+                <th rowspan="2" scope="col">Área</th>
+                <th rowspan="3" scope="col">Disciplinas</th>
+                <th colspan="2" scope="colgroup">Notas</th>
+                <th rowspan="2" scope="col">Médias</th>
             </tr>
             <tr>
                 <th>Nota 1</th>
@@ -53,7 +53,7 @@
 
         <tbody>
             <tr>
-                <th rowspan="4" style="background-color: white;">Exatas</th>
+                <th rowspan="4" scope="rowgroup" style="background-color: white;">Exatas</th>
                 <td>Matemática</td>
                 <td>0.0</td>
                 <td>0.0</td>
@@ -82,12 +82,12 @@
             </tr>
 
             <tr>
-                <th colspan="4">Média de Exatas</th>
+                <th colspan="4" scope="colgroup">Média de Exatas</th>
                 <td style="background-color: rgb(158, 158, 158);">0.0</td>
             </tr>
 
             <tr>
-                <th rowspan="2" style="background-color: white;">Humanas</th>
+                <th rowspan="2" scope="rowgroup" style="background-color: white;">Humanas</th>
                 <td>Historia</td>
                 <td>0.0</td>
                 <td>0.0</td>
@@ -101,7 +101,7 @@
                 <td>0.0</td>
             </tr>
 
-            <th colspan="4">Média Humanas</th>
+            <th colspan="4" scope="row">Média Humanas</th>
             <td style="background-color: rgb(158, 158, 158);">0.0</td>
         </tbody>
     </table>
