@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Iframes</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #tela{
+            width: 95vw;
+            border: 2px solid black;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et autem doloremque, ea odio esse, dolore iure suscipit rem quis, assumenda velit sapiente omnis cupiditate! Ex sint eaque nihil nesciunt quam?</p>
+
+    <ul>
+        <li><a href="paginas-extras/pag001.html" target="frame">Primeira página</a></li>
+        <li><a href="paginas-extras/pag002.html" target="frame">Segunda página</a></li>
+        <li><a href="paginas-extras/pag003.html" target="frame">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia velit alias explicabo libero culpa dolorem eum voluptatem magni, optio quos consequuntur saepe necessitatibus recusandae perspiciatis cupiditate quas, incidunt consectetur modi.</p>
+
+    <iframe id="tela" name="frame" srcdoc="<h1>Escolha uma das opções acima</h1><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus nam non earum unde illum rem doloribus quaerat facere, minus nisi, veniam soluta quia exercitationem rerum voluptatum recusandae, repellat accusantium debitis?</p><img src='imagens/cursoemvideo-logo.png'>">
+        <!--UTILIZAMOS O PARÂMETRO NAME PARA QUE O LINK ACIMA POSSA CONSEGUIR JOGAR SEU CONTEÚDO DENTRO DO IFRAME.-->
+        <p>Infelizmente esse contéudo não é compátivel com seu navegador</p>
+    </iframe>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo facere magni doloremque amet consectetur earum exercitationem! Quo corrupti quibusdam error sint tempore, dolore assumenda laboriosam dolorem perspiciatis consequatur quos maiores!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo porro eaque aliquid obcaecati deleniti accusantium. Autem exercitationem accusamus, quia est dicta ad deserunt voluptate. Possimus ad nemo nisi laboriosam iusto!</p>
+</body>
+</html>
