@@ -1,35 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            margin: auto;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            /* Garante que o padding não aumente a largura do elemento */
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"],
+        button[type="button"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover,
+        button[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        textarea[name="comentario"] {
+            resize: vertical;
+            /* Permite redimensionar verticalmente apenas */
+        }
+
+        textarea[readonly] {
+            background-color: #f0f0f0;
+            color: #777;
+            border: none;
+            resize: none;
+            /* Impede redimensionamento */
+        }
+    </style>
 </head>
+
 <body>
-    <form action="cadastro.js" method="post" autocomplete="on"> 
-    <!--O ACTION NOS LEVA PARA QUAL DOCUMENTO VAMOS SUBMITER O FORMULARIO. 
+    <form action="cadastro.js" method="post" autocomplete="on">
+        <!--O ACTION NOS LEVA PARA QUAL DOCUMENTO VAMOS SUBMITER O FORMULARIO. 
     JÁ O METHOD TEMOS DUAS OPÇÕES (GET: QUE É PARA FORMULARIOS MAIS SIMPLES QUE NÃO POSSUEM INFORMAÇÕES "CONFIDENCIAIS", PODEMOS ENVIAR NO MÁXIMO 300BYTES) (POST: PARA FORMULÁRIOS MAIS SENSIVEIS ONDE POSSUIMOS SENHA, CARTÕES... NÃO TEMOS QUANTIDADE LIMITADA DE BYTES POR ENVIO)
     E O AUTOCOMPLETE QUE É QUANDO QUEREMOS OU NÃO QUE NOSSOS CAMPOS SEJAM AUTOMÁTICAMENTE COMPLETADOS.-->
-    
-        <p>Qual é o seu nome? 
+
+        <p>Qual é o seu nome?
             <input type="text" name="texto" id="txt" value="">
             <button type="submit" onclick="enviar()">Confirmar</button>
         </p><br>
-        
-        <p>CEP 
-            <input type="text" name="cep" id="cep" size="5" maxlength="5"> - 
-            <input type="text" name="cep2" id="cep2" size="3" maxlength="3">
+
+        <p>CEP
+            <input type="number" name="cep" id="cep" size="5" max="5"> -
+            <input type="number" name="cep2" id="cep2" size="3" max="3">
         </p><br>
 
-        <p>Data de nascimento: 
+        <p>Data de nascimento:
             <input type="text" name="dia" id="dia" size="2" maxlength="2" value="dd"> -
             <input type="text" name="mes" id="mes" size="2" maxlength="2" value="mm"> -
             <input type="text" name="ano" id="ano" size="4" maxlength="4" value="aaaa">
         </p>
-        
+
         <fieldset>
             <legend>login</legend>
-                <p>email -
+            <p>email -
                 <label for="lgn"></label>
                 <input type="email" name="lgn" id="lgn">
             </p>
@@ -40,15 +118,16 @@
         </fieldset>
 
         <p>Você deseja trabalhar como Webmaster? <br>
-            <input type="radio" name="webmaster" id="webmaster" value="sim">Sim <br>
+            <input type="radio" name="webmaster" id="webmaster" value="sim" checked>Sim <br>
             <input type="radio" name="webmaster" id="webmaster" value="não">Não <br>
             <input type="radio" name="webmaster" id="webmaster" value="talvez">Talvez <br>
             <input type="radio" name="webmaster" id="webmaster" value="quem_sabe">Quem Sabe <br>
             <button type="button">Confirmar</button>
+            <!--BOTÕES DE RADIO ASSOCIADOS AO MESMO CONTEÚDO PRECISAM CONTER O MESMO "NAME" PARA QUE NÃO OCORRA DE MARCARMOS MAIS DE UMA OPÇÃO E QUEBRAR O CÓDIGO.-->
         </p>
 
         <p>Oque você deseja aprender? <br>
-            <input type="checkbox" name="opcoes" value="html"> HTML <br>
+            <input type="checkbox" name="opcoes" value="html" checked> HTML <br>
             <input type="checkbox" name="opcoes" value="css"> CSS <br>
             <input type="checkbox" name="opcoes" value="javascript"> JavaScript <br>
             <input type="checkbox" name="opcoes" value="php"> PHP <br>
@@ -65,12 +144,12 @@
 
         <p>Você irar torcer para o time de qual grupo? <br>
             <select name="torcida" id="torcida">
-                <optgroup label="Grupo A">Grupo 
+                <optgroup label="Grupo A">Grupo
                     <option value="Cruzeiro">Cruzeiro</option>
                     <option value="Atletic">Atletic</option>
                     <option value="Patrocinense">Patrocinense</option>
                 </optgroup>
-                
+
                 <optgroup label="Grupo B">
                     <option value="Atletico">Atletico</option>
                     <option value="América">América</option>
@@ -78,13 +157,13 @@
                 </optgroup>
             </select>
 
-            <select name="torcida" id="torcida" size="8" multiple> 
-                <optgroup label="Grupo A">Grupo 
+            <select name="torcida" id="torcida" size="8" multiple>
+                <optgroup label="Grupo A">Grupo
                     <option value="Cruzeiro">Cruzeiro</option>
                     <option value="Atletic">Atletic</option>
                     <option value="Patrocinense">Patrocinense</option>
                 </optgroup>
-                
+
                 <optgroup label="Grupo B">
                     <option value="Atletico">Atletico</option>
                     <option value="América">América</option>
@@ -93,12 +172,12 @@
             </select>
 
             <select name="torcida" id="torcida" size="5">
-                <optgroup label="Grupo A">Grupo 
+                <optgroup label="Grupo A">Grupo
                     <option value="Cruzeiro">Cruzeiro</option>
                     <option value="Atletic">Atletic</option>
                     <option value="Patrocinense">Patrocinense</option>
                 </optgroup>
-                
+
                 <optgroup label="Grupo B">
                     <option value="Atletico">Atletico</option>
                     <option value="América">América</option>
@@ -106,7 +185,7 @@
                 </optgroup>
             </select>
         </p><br>
-        
+
         <textarea name="comentario" rows="10" cols="40" maxlength="500">Comentário</textarea><br>
         <textarea rows="1" cols="40" readonly>
             Escreva algo aqui e ganhe mil reais...
@@ -117,7 +196,7 @@
     <script>
         function enviar() {
             let valor = document.getElementById('txt').value
-            alert('Seu nome é: '+ valor)
+            alert('Seu nome é: ' + valor)
         }
     </script>
 </body>
