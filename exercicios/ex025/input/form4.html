@@ -15,8 +15,11 @@
 
         <p>
             <label for="inivel">Nível de Satisfação</label>
-            <input type="range" name="nivel" id="inivel" min="1" max="5" value="3">
+            <input type="range" name="nivel" id="inivel" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inivel.value)">
+            <output id="ival">5</output>
             <!--O MIN E MAX NO RANGE É UTULIZADO PARA SABER DE QUANTAS "CASAS" PULAMOS ATÉ CHEGAR AO FINAL DA BARRA-->
+            <!--O ONINPUT É acionado imediatamente após qualquer alteração no valor do elemento, mesmo enquanto o usuário ainda está digitando. Este evento é útil para fornecer feedback em tempo real ao usuário, como validar formatos de entrada, atualizar conteúdo dinamicamente ou realizar cálculos automáticos em formulários.-->
+            <!--O ELEMENTO OUTPUT É UMA TAG HTML5 QUE É USADA PARA REPRESENTAR O RESULTADO DE UM CÁLCULO OU UMA SAÍDA DE UM SCRIPT. ELE É ESPECIALMENTE ÚTIL QUANDO VOCÊ TEM UM FORMULÁRIO COM CAMPOS ONDE OS USUÁRIOS INSEREM VALORES, E VOCÊ DESEJA EXIBIR O RESULTADO DE ALGUM CÁLCULO BASEADO NESSES VALORES.-->
         </p>
 
         <p>
